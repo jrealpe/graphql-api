@@ -1,0 +1,35 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Post {
+    id: ID
+    title: String
+    body: String
+    userId: Int
+}
+
+type PostsResult {
+    success: Boolean!
+    errors: [String]
+    posts: [Post]
+}
+
+type PostResult {
+    success: Boolean!
+    errors: [String]
+    post: Post
+}
+
+type Query {
+    getPost(id: ID!): PostResult!
+    listPosts: PostsResult!
+    currentDay(year: Int): String!
+}
+
+type Mutation {
+    createPost(title: String!, body: String!, userId: Int!): PostResult!
+    updatePost(id: ID!, title: String, body: String): PostResult!
+    deletePost(id: ID!): PostResult!
+}

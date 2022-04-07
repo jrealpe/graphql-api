@@ -1,11 +1,14 @@
 """
-Dummy API Module
+API Modules
 """
 
-from .routes import bp
+from . import db2graphql, rest2graphql
 
 
 def init_app(app):
-   # Init API app
+    """
+    Init modules
+    """
 
-   app.register_blueprint(bp)
+    db2graphql.init_app(app)
+    rest2graphql.init_app(app)
