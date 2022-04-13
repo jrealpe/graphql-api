@@ -1,0 +1,25 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type User {
+    username: String!
+    password: String!
+    access_token: String
+}
+
+type LoginResult {
+    success: Boolean!
+    errors: [String]
+    user: User
+}
+
+type Query {
+    getUser(id: ID!): LoginResult!
+}
+
+type Mutation {
+    login(username: String!, password: String!): LoginResult
+    createUser(username: String!, password: String!): LoginResult
+}

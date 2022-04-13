@@ -1,3 +1,7 @@
+"""
+DB GraghQL API mutations
+"""
+
 from datetime import date
 
 from ariadne import convert_kwargs_to_snake_case

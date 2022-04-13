@@ -62,4 +62,3 @@ def graphql_server():
 @bp.route('/welcome')
 def hello():
     return 'Welcome dude!'
-

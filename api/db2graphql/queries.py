@@ -1,3 +1,7 @@
+"""
+DB GraghQL API queries
+"""
+
 from ariadne import convert_kwargs_to_snake_case
 
 from .models import Post

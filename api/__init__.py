@@ -2,7 +2,7 @@
 API Modules
 """
 
-from . import db2graphql, rest2graphql
+from . import db2graphql, rest2graphql, authgraphql
 
 
 def init_app(app):
@@ -12,3 +12,4 @@ def init_app(app):
 
     db2graphql.init_app(app)
     rest2graphql.init_app(app)
+    authgraphql.init_app(app)
